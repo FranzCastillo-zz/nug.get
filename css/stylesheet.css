@@ -1,0 +1,29 @@
+
+body header{
+    margin-top: 30px;        
+}
+body header nav div{
+    display: flex;
+    align-items: center;
+
+}
+body header nav div section.header-logo{
+    width: 500px;       
+    margin-left: 20px;
+}
+body header nav div section.header-logo img{
+    width: 350px;
+    object-fit: contain;
+}
+body header nav div section.header-input{
+    background-color: blueviolet;
+    display: flex;
+    justify-content: right;
+}
+body header nav section.header-buttons {
+    text-align: center;
+    display: flex;    
+    justify-content: center;    
+    align-items: center;
+    
+}
