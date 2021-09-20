@@ -15,10 +15,8 @@ body header nav div section.header-logo img{
     width: 350px;
     object-fit: contain;
 }
-body header nav div section.header-input{
-    background-color: blueviolet;
-    display: flex;
-    justify-content: right;
+body header nav div section.header-input div.header-input-container{   
+    margin-left: 250px;
 }
 body header nav section.header-buttons {
     text-align: center;
