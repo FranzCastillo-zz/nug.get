@@ -43,6 +43,7 @@ body header nav section.header-buttons {
     display: block;
     text-align: center;
     font-size: 17px;
+    font-family: monospace,monaco,helvética
 }
 .navbar .nav li.active a{
     background-color: #e28400;
