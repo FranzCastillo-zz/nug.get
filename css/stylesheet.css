@@ -60,3 +60,9 @@ body header nav section.header-buttons {
 .navbar .nav li:hover{
     background-color: #ffad3b;
 }
+div.container-fluid div.well{
+    height: 50%;
+    width: 50%;
+    color: black;
+    background-color: green;
+}
