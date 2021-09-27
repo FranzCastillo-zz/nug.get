@@ -60,7 +60,7 @@ body header nav section.header-buttons {
 .navbar .nav li:hover{
     background-color: #ffad3b;
 }
-div.container-fluid div.well{
+div.container-fluid div.well{ /*NO SE QUE ONDA CON ESTE CSS ES PARA EL POST, PERO LE VALIO MADRES*/
     height: 50%;
     width: 50%;
     color: black;
