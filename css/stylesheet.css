@@ -1,30 +1,4 @@
 
-/*body header{
-    margin-top: 30px;        
-}
-body header nav div{
-    display: flex;
-    align-items: center;
-
-}
-body header nav div section.header-logo{
-    width: 500px;       
-    margin-left: 20px;
-}
-body header nav div section.header-logo img{
-    width: 350px;
-    object-fit: contain;
-}
-body header nav div section.header-input div.header-input-container{   
-    margin-left: 250px;
-}
-body header nav section.header-buttons {
-    text-align: center;
-    display: flex;    
-    justify-content: center;    
-    align-items: center;
-    
-}*/
 .container-fluid{
     padding-top: 7px;
 }
@@ -43,7 +17,7 @@ body header nav section.header-buttons {
     display: block;
     text-align: center;
     font-size: 17px;
-    font-family: monospace,monaco,helvética
+    font-family: Helvetica ,monaco
 }
 .navbar .nav li.active a{
     background-color: #e28400;
@@ -64,5 +38,5 @@ div.container-fluid div.well{ /*NO SE QUE ONDA CON ESTE CSS ES PARA EL POST, PER
     height: 50%;
     width: 50%;
     color: black;
-    background-color: green;
+    background-color: rgb(196, 231, 39);
 }
