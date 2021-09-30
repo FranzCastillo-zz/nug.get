@@ -34,9 +34,9 @@
 .navbar .nav li:hover{
     background-color: #ffad3b;
 }
-div.container-fluid div.well{ /*NO SE QUE ONDA CON ESTE CSS ES PARA EL POST, PERO LE VALIO MADRES*/
+div.container-fluid div.well{ 
     height: 50%;
     width: 50%;
     color: black;
-    background-color: rgb(196, 231, 39);
+    background-color: #E9C46A;
 }
