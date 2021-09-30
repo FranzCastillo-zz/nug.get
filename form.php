@@ -23,7 +23,7 @@
     <body>
 
     <div class="container-fluid" style="background-color:#FFBF69;height:150px;">
-            <a href="index.html"><img src="images/nugget-logo.png" width="500" height="130"></a>
+        <a href="index.html"><img src="images/nugget-logo.png" width="500" height="130"></a>
         </div>
         <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="200">
             <ul class="nav navbar-nav">
@@ -33,8 +33,9 @@
             <li class="active"><a href="form.php">Publicar</a></li>
             </ul>
         </nav>
-    <div class="container-fluid" style="height:1000"> <!--AQUI VA TODO EL CONTENIDO DE LA PAGINA-->
-    <form action="form.php" method="POST" enctype="multipart/form-data">
+
+    <div class="container-fluid" style="height:1000"> 
+    <!--AQUI VA TODO EL CONTENIDO DE LA PAGINA-->
 
         <div class="page-wrapper p-t-45 p-b-50" style="background-color:#2ec4b6;">
             <div class="wrapper wrapper--w790">
@@ -43,7 +44,8 @@
                         <h2 class="title" STYLE="text-transform:capitalize">Ingrese sus datos</h2>
                     </div>
                     <div class="card-body">
-                        <form method="POST">
+                        <form action="form.php" method="POST" enctype="multipart/form-data">
+
                             <div class="form-row">
                                 <div class="name">Usuario</div>
                                     <div class="value">
@@ -90,15 +92,14 @@
                                 </div>
                             </div>
                             <div>
-                                <button class="btn btn--radius-2" style="background-color:#FF9F1C;" type="submit">Register</button>
+                                <button class="btn btn--radius-2" style="background-color:#FF9F1C;" type="submit" name="enviar">Publicar</button>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
-        </div>    
-        
-    </form>   
+        </div>     
       
     <!-- AQUÍ TERMINA -->    
     </div>
@@ -109,7 +110,6 @@
     <script src="vendor/select2/select2.min.js"></script>
     <script src="vendor/datepicker/moment.min.js"></script>
     <script src="vendor/datepicker/daterangepicker.js"></script>
-
     <!-- Main JS-->
     <script src="js/global.js"></script>
 
