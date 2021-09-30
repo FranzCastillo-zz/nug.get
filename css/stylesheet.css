@@ -37,7 +37,10 @@ div.container-fluid div.well{
     height: 50%;
     width: 50%;
     color: black;
-    background-color: #E9C46A;
+    background-color: #febf72;
+}.well{
+    background-color:white;
+    border: white;
 }
 
 body div div.rectangle{     
@@ -62,6 +65,6 @@ body div div.rectangle{
     color: white;
 }body div div.rectangle img{
     align: right;
-    height: 70px;    
+    height: 200px;    
 }
 
