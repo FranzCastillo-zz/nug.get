@@ -74,12 +74,20 @@
                                 <div class="name">Link de la imagen</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-5" type="text" name="foto">
+                                        <input class="input--style-5" size="30" type="text" name="foto">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="name">Forma de contacto</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-5" size="30" type="text" name="foto">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row p-t-20">
-                                <label class="label label--block">Que desea hacer?</label>
+                                <div class="name">Que desea hacer?</div>
                                 <div class="p-t-15">
                                     <label class="radio-container m-r-55">Solicitar
                                         <input type="radio" checked="checked" name="opcion">
