@@ -66,5 +66,6 @@ body div div.rectangle{
 }body div div.rectangle img{
     align: right;
     height: 200px;    
+    border-radius: 25px;
 }
 
