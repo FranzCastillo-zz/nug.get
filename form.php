@@ -23,7 +23,7 @@
     <body>
 
     <div class="container-fluid" style="background-color:#FFBF69;height:150px;">
-        <a href="index.html"><img src="images/nugget-logo.png" width="500" height="130"></a>
+        <a href="index.html"><img src="images/nugget-logo-white.png" width="500" height="130"></a>
         </div>
         <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="200">
             <ul class="nav navbar-nav">
@@ -79,7 +79,7 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="name">Forma de contacto</div>
+                                <div class="name">Link de contacto</div>
                                 <div class="value">
                                     <div class="input-group">
                                         <input class="input--style-5" size="30" type="text" name="foto">
