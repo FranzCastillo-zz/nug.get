@@ -29,8 +29,8 @@
                 include 'Tablas.php';
                 include 'tablaOfrecer.php';
                 include 'Vista.php';
-                $solicitar = new tablaOfrecer();
-                $ingresos =  $solicitar->obtenerIngresos();
+                $ofrecer = new tablaOfrecer();
+                $ingresos =  $ofrecer->obtenerIngresos();
 
                 $vista = new Vista();
                 $vista -> mostrarPublicaciones($ingresos);
