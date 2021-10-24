@@ -89,15 +89,16 @@
                                 <div class="name">Que desea hacer?</div>
                                 <div class="p-t-15">
                                     <label class="radio-container m-r-55">Solicitar
-                                        <input type="checkbox" name="solicitar">
+                                        <input type="radio" checked="checked" name="tipo" value="solicitar">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container">Ofrecer
-                                        <input type="checkbox" name="ofrecer">
+                                        <input type="radio" name="tipo" value="ofrecer">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
                             </div>
+                            
                             <div>
                                 <button class="btn btn--radius-2" style="background-color:#FF9F1C;" type="submit" name="enviar">Publicar</button>
                             </div>
@@ -156,17 +157,20 @@
 
     if (isset($_POST['enviar'])) 
 	{
+
+        echo "<script type='text/javascript'>alert('Porfavor seleccione una opción de publicación);</script>";
+
         if (!$Conexion) 
         {
 	   		die ("No se logro la conexion");
 	    }
         else
         {
-            if (isset($_POST['solicitar']))
+            if ($_POST['tipo'] == "solicitar")
             {
                 ingresarATabla('solicitar');   
             }
-            else if (isset($_POST['ofrecer']))
+            else if ($_POST['tipo'] == "ofrecer")
             {
                 ingresarATabla('ofrecer');  
             }
