@@ -18,13 +18,24 @@
         <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="200">
             <ul class="nav navbar-nav">
             <li><a href="index.html">Inicio</a></li> 
-            <li><a href="solicitar.html">Solicitar</a></li> <!-- Cambiar la extension al momento de implementar php-->
-            <li class="active"><a href="ofrecer.html">Ofrecer</a></li>
+            <li><a href="solicitar.php">Solicitar</a></li> <!-- Cambiar la extension al momento de implementar php-->
+            <li class="active"><a href="ofrecer.php">Ofrecer</a></li>
             <li><a href="form.php">Publicar</a></li>
             </ul>
         </nav>
         <div class="container-fluid" style="height:1000"> <!--AQUI VA TODO EL CONTENIDO DE LA PAGINA-->
-            <div class="well">
+            <!--AQUI SE TIENE QUE PONER EL PHP-->
+            <?php
+                include 'Tablas.php';
+                include 'tablaOfrecer.php';
+                include 'Vista.php';
+                $solicitar = new tablaOfrecer();
+                $ingresos =  $solicitar->obtenerIngresos();
+
+                $vista = new Vista();
+                $vista -> mostrarPublicaciones($ingresos);
+            ?>
+            <!--<div class="well">
                 <img src="https://image.freepik.com/foto-gratis/bolsa-malla-textil-productos-frutas-verduras-cero-desperdicio-ecologico-reciclado-plastico-reutilizable-concepto-compra-comestibles-sostenible-fondo-plano-laico_419307-1408.jpg" ALIGN="right" width="120" height="120">
                 <p class="lead"><b>Venta de Frutas y Verduras</b></p>
                 <p style="font-size: medium;" > Se venden frutas y verduras variadas, entregas a domicilio a zonas céntricas.</p>
@@ -47,7 +58,7 @@
                 <p class="lead"><b>Pasteles Pastelosos</b></p>
                 <p style="font-size: medium;"> Encarga con nostros tu pastel, de cualquier tipo de relleno y estilo que desees!.</p>
                 <p style="font-size: small;" class="text-muted"> Publicado por: Rosio De León el 15/01/2021</p> 
-            </div>
+            </div>-->
         </div>
     </body>
 </html>

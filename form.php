@@ -21,15 +21,14 @@
 </head>
 
     <body>
-
     <div class="container-fluid" style="background-color:#FFBF69;height:150px;">
         <a href="index.html"><img src="images/nugget-logo-white.png" width="500" height="130"></a>
         </div>
         <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="200">
             <ul class="nav navbar-nav">
             <li><a href="index.html">Inicio</a></li> 
-            <li><a href="solicitar.html">Solicitar</a></li> <!-- Cambiar la extension al momento de implementar php-->
-            <li><a href="ofrecer.html">Ofrecer</a></li>
+            <li><a href="solicitar.php">Solicitar</a></li> <!-- Cambiar la extension al momento de implementar php-->
+            <li><a href="ofrecer.php">Ofrecer</a></li>
             <li class="active"><a href="form.php">Publicar</a></li>
             </ul>
         </nav>

@@ -1,10 +1,7 @@
 <?php
-class tablaSolicitar extends Tablas{
+class tablaOfrecer extends Tablas{
     public function __construct(){
         parent::__construct('ofrecer');
-    }
-    public function mostrarPublicaciones(){
-
     }
 }
 ?>

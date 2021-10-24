@@ -1,5 +1,5 @@
 <?php
-abstract class tablas{
+class Tablas{
     private $nombreTabla;
     private $conexion;
 
@@ -14,7 +14,7 @@ abstract class tablas{
         $dbname = "nugget";
         $this->conexion = new mysqli($servername, $username, $password, $dbname);
     }
-    protected function ingresarATabla($usuario, $titulo, $descripcion, $linkImagen, $linkContacto){
+    public function ingresarATabla($usuario, $titulo, $descripcion, $linkImagen, $linkContacto){
         $this->conexion = $this->conectar();
         if($this->conexion){
            $sql = "INSERT INTO `$this->nombreTabla`(`Usuario`, `Titulo`, `Descripcion`, `LinkImagen`, `LinkContacto`) VALUES ('$usuario','$titulo','$descripcion','$linkImagen','$linkContacto')";
@@ -28,7 +28,7 @@ abstract class tablas{
         }
         mysqli_close($this->conexion);
     }
-    protected function obtenerIngresos(){
+    public function obtenerIngresos(){
         $this->conexion = $this->conectar();
         if($this->conexion){
             $sql = "SELECT * FROM `$this->nombreTabla ` ORDER BY `FechaDePublicacion` ASC;";
@@ -36,11 +36,11 @@ abstract class tablas{
             if($result -> num_rows > 0){
                 return $result;
             }
+            echo "<script> alert('aaaaaaaaaaa');</script>";
         }else{
             echo "<script> alert('Ha ocurrido un error, verifique su conexion.');</script>";
         }
-        mysqli_close($this->conexion);
+        //mysqli_close($this->conexion);
     }
-    public abstract function mostrarPublicaciones();
 }
 ?>

@@ -18,13 +18,26 @@
         <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="200">
             <ul class="nav navbar-nav">
             <li><a href="index.html">Inicio</a></li> 
-            <li class="active"><a href="solicitar.html">Solicitar</a></li> <!-- Cambiar la extension al momento de implementar php-->
-            <li><a href="ofrecer.html">Ofrecer</a></li>
+            <li class="active"><a href="solicitar.php">Solicitar</a></li> <!-- Cambiar la extension al momento de implementar php-->
+            <li><a href="ofrecer.php">Ofrecer</a></li>
             <li><a href="form.php">Publicar</a></li>
             </ul>
         </nav>
         <div class="container-fluid" style="height:1000"> <!--AQUI VA TODO EL CONTENIDO DE LA PAGINA-->
-            <div class="well">
+            <!--AQUI SE TIENE QUE PONER EL PHP-->
+            <?php
+                include 'Tablas.php';
+                include 'tablaSolicitar.php';
+                include 'Vista.php';
+                $solicitar = new tablaSolicitar();
+                $ingresos =  $solicitar->obtenerIngresos();
+
+                $vista = new Vista();
+                $vista -> mostrarPublicaciones($ingresos);
+            ?>
+
+
+            <!--<div class="well">
                 <img src="https://cdn-icons-png.flaticon.com/512/79/79693.png" ALIGN="right" width="120" height="120">
                 <p class="lead"><b>Impresion de Playeras</b></p>
                 <p style="font-size: medium;" >Necesitamos serigrafiado para playeras de equipo de futbol.</p>
@@ -47,7 +60,7 @@
                 <p class="lead"><b>Enfermero/a</b></p>
                 <p style="font-size: medium;"> Necesitamos de un enfermero/a que pueda cuidar a un paciente. Mas info por número de teléfono</p>
                 <p style="font-size: small;" class="text-muted"> Publicado por: Rosio De León el 15/01/2021</p> 
-            </div>
+            </div>-->
         </div>
     </body>
 </html>
