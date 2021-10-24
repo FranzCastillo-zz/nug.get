@@ -73,7 +73,7 @@
                                 <div class="name">Link de la imagen</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-5" size="30" type="text" name="foto">
+                                        <input class="input--style-5" size="30" type="text" name="imagen">
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                                 <div class="name">Link de contacto</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-5" size="30" type="text" name="foto">
+                                        <input class="input--style-5" size="30" type="text" name="contacto">
                                     </div>
                                 </div>
                             </div>
@@ -89,11 +89,11 @@
                                 <div class="name">Que desea hacer?</div>
                                 <div class="p-t-15">
                                     <label class="radio-container m-r-55">Solicitar
-                                        <input type="radio" checked="checked" name="opcion">
+                                        <input type="checkbox" name="solicitar">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container">Ofrecer
-                                        <input type="radio" name="opcion">
+                                        <input type="checkbox" name="ofrecer">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -125,5 +125,52 @@
 </html>
 
 <?php
+    $User = 'root';
+    $Contraseña = '';
+    $Servidor = 'localhost';
+    $Base = 'nugget';
+    $Conexion = mysqli_connect($Servidor, $User, $Contraseña, $Base);
+
+    function ingresarATabla($Tabla)
+    {
+        $Connect = mysqli_connect('localhost', 'root', '', 'nugget');
+
+        $Usuario = $_POST['usuario'];
+	  	$Titulo = $_POST['titulo'];
+	   	$Descripcion = $_POST['descripcion'];
+	   	$LImagen = $_POST['imagen'];
+	   	$LContacto = $_POST['contacto'];
+        $Fecha = date('Y-m-d H:i:s');
+
+        $sql = "INSERT INTO $Tabla (Usuario, Titulo, Descripcion, LinkImagen, LinkContacto, FechaDePublicacion) VALUES ('$Usuario', '$Titulo', '$Descripcion', '$LImagen', '$LContacto', '$Fecha')";
+
+        if (mysqli_query($Connect, $sql)) 
+        {
+            echo "<script type='text/javascript'>alert('Se ha enviado la publicación');</script>";
+        }
+        else
+        {
+            echo "<script type='text/javascript'>alert('Existe un error de conexión, porfavor inténtelo de nuevo');</script>";
+        }
+    }
+
+    if (isset($_POST['enviar'])) 
+	{
+        if (!$Conexion) 
+        {
+	   		die ("No se logro la conexion");
+	    }
+        else
+        {
+            if (isset($_POST['solicitar']))
+            {
+                ingresarATabla('solicitar');   
+            }
+            else if (isset($_POST['ofrecer']))
+            {
+                ingresarATabla('ofrecer');  
+            }
+        }
+    }
 
 ?>
