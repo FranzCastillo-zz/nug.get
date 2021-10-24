@@ -8,7 +8,7 @@
                     $this->well($row["Usuario"], $row["Titulo"], $row["Descripcion"], $row["LinkImagen"],$row["LinkContacto"], $row["FechaDePublicacion"]);
                 }
             }else{
-                echo("Al chile no hay ingresos xd");
+                $this -> noEntries();
             }        
         }
 
@@ -30,6 +30,14 @@
             ');
         }
         
+
+        private function noEntries(){
+            echo('               
+            <p style = "text-align: center; font-size: xx-large; font-weight:bold;">
+                No Se han Ingresado Datos Todavía 
+            </p>                             
+            ');
+        }
     }
 
 ?>
