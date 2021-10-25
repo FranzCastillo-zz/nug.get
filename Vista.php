@@ -19,8 +19,10 @@
                 <h1>' . $title .'</h1>
                 <p>'. $description .'</p>
 
-            <p style="font-size:small;"> Publicado por: ' . $user . ' el ' . $date . ' </p><p>
-            </p>
+            <p style="font-size:small;"> Publicado por: ' . $user . ' el ' . $date . ' </p>
+            <div class="contactButton" style="display: flex; justify-content: flex-end;">
+                 <button type="button" class="btn"> <a href = "'.$contactLink.'"> contactar </a></button>
+            </div>
             </section>
             <section>
                 <img src="'. $image .'" alt="">
@@ -37,7 +39,7 @@
                 No Se han Ingresado Datos Todavía 
             </p>                             
             ');
-        }
+        }     
     }
 
 ?>

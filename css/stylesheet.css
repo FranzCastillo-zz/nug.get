@@ -43,6 +43,10 @@ div.container-fluid div.well{
     border: white;
 }
 
+
+
+
+
 body div div.rectangle{     
     display: flex;
     justify-content: space-between;
@@ -67,5 +71,10 @@ body div div.rectangle{
     align: right;
     height: 200px;    
     border-radius: 25px;
+}
+
+body div div.rectangle div.contactButton{
+    display: flex;
+    justify-content: flex-end;
 }
 
