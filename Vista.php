@@ -20,7 +20,7 @@
                 <p>'. $description .'</p>
 
             <p style="font-size:small;"> Publicado por: ' . $user . ' el ' . $date . ' </p>
-            <div class="contactButton" style="display: flex; justify-content: flex-end;">
+            <div class="contactButton" style="display: flex; justify-content: flex-end; margin: 10px">
                  <button type="button" class="btn"> <a href = "'.$contactLink.'"> contactar </a></button>
             </div>
             </section>
