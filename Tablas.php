@@ -42,7 +42,7 @@ class Tablas{
         //Verifica si la conexion fue exitosa
         if($this->conexion){
             // Se asigna el Query (Ingresa la informacion a la DB)
-            $sql = "SELECT * FROM `$this->nombreTabla` ORDER BY `FechaDePublicacion` ASC;";
+            $sql = "SELECT * FROM `$this->nombreTabla` ORDER BY `FechaDePublicacion` DESC;";
             // Se asignan los reusltados del query
             $result = $this->conexion -> query($sql);
             // verifica si hay, al menos, una publicacion
