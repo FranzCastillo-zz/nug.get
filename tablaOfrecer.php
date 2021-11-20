@@ -1,7 +1,8 @@
 <?php
 class tablaOfrecer extends Tablas{
     public function __construct(){
-        parent::__construct('ofrecer');
+        parent::__construct();
+        parent::setTabla('ofrecer');
     }
 }
 ?>

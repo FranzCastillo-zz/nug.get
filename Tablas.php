@@ -1,20 +1,25 @@
 <?php
-class Tablas{
+include 'interaccionConTabla.php';
+class Tablas implements interaccionConTabla{
     private $nombreTabla;
     private $conexion;
 
-    public function __construct($tabla){
+    public function __construct(){
+
+    }
+    public function setTabla($tabla){
         $this->nombreTabla = $tabla;
     }
-    private function conectar(){
+    public function conectar(){
         $servername = "localhost";
         $username = "root";
         $password = "";
         $dbname = "nugget";
         // Crea la conexion a la base de datos
         $this->conexion = new mysqli($servername, $username, $password, $dbname);
+        return $this->conexion;
     }
-    public function ingresarATabla($usuario, $titulo, $descripcion, $linkImagen, $linkContacto){
+    public function ingresarATabla($usuario, $titulo, $descripcion, $linkImagen, $linkContacto, $fecha){
         //Se conecta a la base de datos
         $this->conectar();
         //Verifica si la conexion fue exitosa
@@ -24,14 +29,14 @@ class Tablas{
             // SE INTENTA INGRESAR A LA BASE DE DATOS
             if($this->conexion -> query($sql)){
                 // EXITO
-                echo "<script> alert('Hemos hecho la publicacion exitosamente!');</script>";    
+                echo "<script type='text/javascript'>alert('Se ha enviado la publicación');</script>";   
             }else{
                 // ERROR
                 echo "<script> alert('Ha ocurrido un error en el ingreso a la base de Datos: ". $this->connection -> error . "');</script>"; 
             }
         }else{
             // POR SI HAY ERROR DE CONEXION
-            echo "<script> alert('Ha ocurrido un error, verifique su conexion.');</script>";
+            echo "<script type='text/javascript'>alert('Existe un error de conexión, porfavor inténtelo de nuevo');</script>";
         }
         //se cierra la conexion a la base de datos
         mysqli_close($this->conexion);

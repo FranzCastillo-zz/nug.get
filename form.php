@@ -126,54 +126,34 @@
 </html>
 
 <?php
-    $User = 'root';
-    $Contraseña = '';
-    $Servidor = 'localhost';
-    $Base = 'nugget';
-    $Conexion = mysqli_connect($Servidor, $User, $Contraseña, $Base);
-
-    function ingresarATabla($Tabla)
-    {
-        $Connect = mysqli_connect('localhost', 'root', '', 'nugget');
-
-        $Usuario = $_POST['usuario'];
-	  	$Titulo = $_POST['titulo'];
-	   	$Descripcion = $_POST['descripcion'];
-	   	$LImagen = $_POST['imagen'];
-	   	$LContacto = $_POST['contacto'];
-        $Fecha = date('Y-m-d H:i:s');
-
-        $sql = "INSERT INTO $Tabla (Usuario, Titulo, Descripcion, LinkImagen, LinkContacto, FechaDePublicacion) VALUES ('$Usuario', '$Titulo', '$Descripcion', '$LImagen', '$LContacto', '$Fecha')";
-
-        if (mysqli_query($Connect, $sql)) 
-        {
-            echo "<script type='text/javascript'>alert('Se ha enviado la publicación');</script>";
-        }
-        else
-        {
-            echo "<script type='text/javascript'>alert('Existe un error de conexión, porfavor inténtelo de nuevo');</script>";
-        }
-    }
-
-    if (isset($_POST['enviar'])) 
+    include 'Tablas.php';
+    $tabla = new Tablas();
+    $conexion = $tabla -> conectar();
+    if (isset($_POST['enviar'])) // SI SE PRESIONO ENVIAR EN EL FORMULARIO
 	{
-
         echo "<script type='text/javascript'>alert('Porfavor seleccione una opción de publicación);</script>";
-
-        if (!$Conexion) 
+        if (!$conexion) //SI NO SE HA LOGRADO CONECTAR A LA BASE DE DATOS
         {
 	   		die ("No se logro la conexion");
 	    }
         else
         {
-            if ($_POST['tipo'] == "solicitar")
+            // LEE LOS DATOS QUE SE ENCUENTRAN EN EL FORMULARIO
+            $usuario = $_POST['usuario'];
+            $titulo = $_POST['titulo'];
+            $descripcion = $_POST['descripcion'];
+            $linkImagen = $_POST['imagen'];
+            $linkContacto = $_POST['contacto'];
+            $fecha = date('d-m-Y H:i');
+            if ($_POST['tipo'] == "solicitar") // SI LA PUBLICACION ES DE TIPO SOLICITAR
             {
-                ingresarATabla('solicitar');   
+                $tabla -> setTabla('solicitar');
             }
-            else if ($_POST['tipo'] == "ofrecer")
+            else if ($_POST['tipo'] == "ofrecer") // SI LA PUBLICACION ES DE TIPO OFRECER
             {
-                ingresarATabla('ofrecer');  
+                $tabla -> setTabla('ofrecer');
             }
+            $tabla -> ingresarATabla($usuario, $titulo, $descripcion, $linkImagen, $linkContacto, $fecha);
         }
     }
 

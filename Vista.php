@@ -8,7 +8,7 @@
                     $this->well($row["Usuario"], $row["Titulo"], $row["Descripcion"], $row["LinkImagen"],$row["LinkContacto"], $row["FechaDePublicacion"]);
                 }
             }else{
-                $this -> noEntries();
+                $this -> noHayDatos();
             }        
         }
 
@@ -33,7 +33,7 @@
         }
         
 
-        private function noEntries(){
+        private function noHayDatos(){
             echo('               
             <p style = "text-align: center; font-size: xx-large; font-weight:bold;">
                 No Se han Ingresado Datos Todavía 
