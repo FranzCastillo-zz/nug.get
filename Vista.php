@@ -25,13 +25,13 @@
             </div>
             </section>
             <section>
-                <img src="'. $image .'" alt="">
+                <div class="container">
+                    <img class="crop" src="'. $image .'"/>
+                </div>
             </section>
             </div>
-
             ');
         }
-        
 
         private function noHayDatos(){
             echo('               
@@ -39,7 +39,14 @@
                 No Se han Ingresado Datos Todavía 
             </p>                             
             ');
-        }     
+        } 
+        
+        public function separar(){
+            echo('
+                <br>
+                <br>
+            ');
+        }
     }
 
 ?>

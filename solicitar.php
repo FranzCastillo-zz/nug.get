@@ -33,6 +33,7 @@
 
                 $vista = new Vista();
                 $vista -> mostrarPublicaciones($ingresos);
+                $vista -> separar();
             ?>
         </div>
     </body>

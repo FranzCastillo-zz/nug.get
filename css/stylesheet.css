@@ -105,3 +105,23 @@ body div div.rectangle div.contactButton{
     justify-content: flex-end;
 }
 
+.container {
+    display: flex;
+    width: 350px;
+    height: 200px;
+    overflow: hidden;
+    margin: 10px;
+    position: relative;
+}
+.container > .crop {
+    display: flex;
+    position:absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+
