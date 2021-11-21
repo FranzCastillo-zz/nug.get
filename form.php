@@ -131,7 +131,6 @@
     $conexion = $tabla -> conectar();
     if (isset($_POST['enviar'])) // SI SE PRESIONO ENVIAR EN EL FORMULARIO
 	{
-        echo "<script type='text/javascript'>alert('Porfavor seleccione una opción de publicación);</script>";
         if (!$conexion) //SI NO SE HA LOGRADO CONECTAR A LA BASE DE DATOS
         {
 	   		die ("No se logro la conexion");
@@ -145,15 +144,27 @@
             $linkImagen = $_POST['imagen'];
             $linkContacto = $_POST['contacto'];
             $fecha = date('d-m-Y H:i');
-            if ($_POST['tipo'] == "solicitar") // SI LA PUBLICACION ES DE TIPO SOLICITAR
+            if (empty($usuario) || empty($titulo) || empty($descripcion) || empty($linkImagen) || empty($linkContacto))
             {
-                $tabla -> setTabla('solicitar');
+                echo "<script type='text/javascript'>alert('Porfavor ingrese todos los datos');</script>";
             }
-            else if ($_POST['tipo'] == "ofrecer") // SI LA PUBLICACION ES DE TIPO OFRECER
+            else
             {
-                $tabla -> setTabla('ofrecer');
+                if ($_POST['tipo'] == "solicitar") // SI LA PUBLICACION ES DE TIPO SOLICITAR
+                {
+                    $tabla -> setTabla('solicitar');
+                }
+                else if ($_POST['tipo'] == "ofrecer") // SI LA PUBLICACION ES DE TIPO OFRECER
+                {
+                    $tabla -> setTabla('ofrecer');
+                }
+                $tabla -> ingresarATabla($usuario, $titulo, $descripcion, $linkImagen, $linkContacto, $fecha);
             }
-            $tabla -> ingresarATabla($usuario, $titulo, $descripcion, $linkImagen, $linkContacto, $fecha);
+
+
+
+
+            
         }
     }
 
