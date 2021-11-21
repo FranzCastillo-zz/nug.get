@@ -70,9 +70,9 @@ div.container-fluid div.well{
     border: white;
 }
 
-
-
-
+/* ==========================================================================
+   #WELL
+   ========================================================================== */
 
 body div div.rectangle{     
     display: flex;
@@ -104,6 +104,10 @@ body div div.rectangle div.contactButton{
     display: flex;
     justify-content: flex-end;
 }
+
+/* ==========================================================================
+   #IMAGEN
+   ========================================================================== */
 
 .container {
     display: flex;
