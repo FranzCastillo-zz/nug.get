@@ -1,3 +1,7 @@
+body{
+    background-color: #e9ecef;   
+}
+
 .container-fluid{
     padding-top: 7px;
 }
@@ -11,28 +15,50 @@
 .affix + .container-fluid {
     padding-top: 70px;
 }
+
+/*Propiedades de la barra de navegacion*/
 .navbar{
-    background-color: #ff9f1c;
+    background-color: #343a40;
     display: block;
     text-align: center;
     font-size: 17px;
-    font-family: Helvetica ,monaco
+    font-family: Helvetica , monaco;
 }
+
+/*Propiedades del borde del menu*/
+.navbar-inverse{
+    border: 0px;    
+}
+
+/*Boton de menu seleccionado*/
 .navbar .nav li.active a{
-    background-color: #e28400;
-    color: black;
-}
-.navbar .nav li.active a:hover{
-    background-color: #ffad3b;
+    background-color: #495057;
     color: white;
 }
-.navbar .nav li a{
-    background-color: #ff9f1c;
+
+/*boton de menu cuando el cursor esta encima DEL BOTON SELECCIONADO*/
+.navbar .nav li.active a:hover{
+    background-color: #ced4da;
     color: black;
 }
-.navbar .nav li:hover{
-    background-color: #ffad3b;
+
+/*botones del menu por default*/
+.navbar .nav li a{
+    background-color: #343a40;
+    color: white;
 }
+
+/*Color de fondo de los botones cuando el cursor esta encima*/
+.navbar .nav li:hover{
+    background-color: #ced4da;
+    color: black;
+}
+
+/*Color de fondo del TEXTO cuando el cursor esta encima*/
+.navbar .nav li a:hover{
+    color:black;
+}
+
 div.container-fluid div.well{ 
     height: 50%;
     width: 50%;
@@ -52,7 +78,7 @@ body div div.rectangle{
     justify-content: space-between;
     height: 100%;
     width: 80%;
-    background-color: #febf72;
+    background-color: #6c757d;
     padding: 10px;  
     padding-left: 20px;
     margin-top: 30px;

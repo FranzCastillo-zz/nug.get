@@ -21,7 +21,7 @@
 </head>
 
     <body>
-    <div class="container-fluid" style="background-color:#FFBF69;height:150px;">
+    <div class="container-fluid" style="background-color:#343a40;height:150px;">
         <a href="index.html"><img src="images/nugget-logo-white.png" width="500" height="130"></a>
         </div>
         <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="200">
