@@ -150,20 +150,23 @@
             }
             else
             {
-                if ($_POST['tipo'] == "solicitar") // SI LA PUBLICACION ES DE TIPO SOLICITAR
+                if (filter_var($linkImagen, FILTER_VALIDATE_URL) === false || filter_var($linkContacto, FILTER_VALIDATE_URL) === false)
                 {
-                    $tabla -> setTabla('solicitar');
+                    echo "<script type='text/javascript'>alert('Porfavor ingrese un link valido');</script>";
                 }
-                else if ($_POST['tipo'] == "ofrecer") // SI LA PUBLICACION ES DE TIPO OFRECER
+                else
                 {
-                    $tabla -> setTabla('ofrecer');
+                    if ($_POST['tipo'] == "solicitar") // SI LA PUBLICACION ES DE TIPO SOLICITAR
+                    {
+                        $tabla -> setTabla('solicitar');
+                    }
+                    else if ($_POST['tipo'] == "ofrecer") // SI LA PUBLICACION ES DE TIPO OFRECER
+                    {
+                        $tabla -> setTabla('ofrecer');
+                    }
+                    $tabla -> ingresarATabla($usuario, $titulo, $descripcion, $linkImagen, $linkContacto, $fecha);
                 }
-                $tabla -> ingresarATabla($usuario, $titulo, $descripcion, $linkImagen, $linkContacto, $fecha);
             }
-
-
-
-
             
         }
     }
