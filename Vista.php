@@ -26,10 +26,8 @@
             BACKGROUND-COLOR: rgb(233,233,233)"><a href = "'.$contactLink.'"> contactar </a></button>
             </div>
             </section>
-            <section>
-                <div class="container">
-                    <img class="crop" src="'. $image .'"/>
-                </div>
+            <section>                
+                <img src="'. $image .'" width = "350" height = "200"/>                
             </section>
             </div>
             ');
@@ -38,7 +36,7 @@
         private function noHayDatos(){
             echo('               
             <p style = "text-align: center; font-size: xx-large; font-weight:bold;">
-                No Se han Ingresado Datos Todavía 
+                No Se Han Ingresado Datos Todavía 
             </p>                             
             ');
         } 
