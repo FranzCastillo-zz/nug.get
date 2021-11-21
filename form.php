@@ -36,11 +36,11 @@
     <div class="container-fluid" style="height:1000"> 
     <!--AQUI VA TODO EL CONTENIDO DE LA PAGINA-->
 
-        <div class="page-wrapper p-t-45 p-b-50" style="background-color:#2ec4b6;">
+        <div class="page-wrapper p-t-45 p-b-50" style="background-color:#6C757D;">
             <div class="wrapper wrapper--w790">
                 <div class="card card-5">
                     <div class="card-heading">
-                        <h2 class="title" STYLE="text-transform:capitalize">Ingrese sus datos</h2>
+                        <h2 class="title" STYLE="text-transform:capitalize" >Ingrese sus datos</h2>
                     </div>
                     <div class="card-body">
                         <form action="form.php" method="POST" enctype="multipart/form-data">
@@ -88,7 +88,7 @@
                             <div class="form-row p-t-20">
                                 <div class="name">Que desea hacer?</div>
                                 <div class="p-t-15">
-                                    <label class="radio-container m-r-55">Solicitar
+                                    <label class="radio-container m-r-55" >Solicitar
                                         <input type="radio" checked="checked" name="tipo" value="solicitar">
                                         <span class="checkmark"></span>
                                     </label>
@@ -100,7 +100,7 @@
                             </div>
                             
                             <div>
-                                <button class="btn btn--radius-2" style="background-color:#FF9F1C;" type="submit" name="enviar">Publicar</button>
+                                <button class="btn btn--radius-2" style="background-color:#343A40;" type="submit" name="enviar">Publicar</button>
                             </div>
                         </form>
 
