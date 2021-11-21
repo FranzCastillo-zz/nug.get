@@ -21,7 +21,9 @@
 
             <p style="font-size:small;"> Publicado por: ' . $user . ' el ' . $date . ' </p>
             <div class="contactButton" style="display: flex; justify-content: flex-end; margin: 10px">
-                 <button type="button" class="btn"> <a href = "'.$contactLink.'"> contactar </a></button>
+                 <button type="button" value="Contactar" class="btn">
+            style="BORDER: rgb(128,128,128) 1px solid; FONT-SIZE: 8pt; FONT-FAMILY: Verdana; 
+            BACKGROUND-COLOR: rgb(233,233,233)"><a href = "'.$contactLink.'"> contactar </a></button>
             </div>
             </section>
             <section>
