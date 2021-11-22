@@ -20,7 +20,8 @@
                 <p>'. $description .'</p>
 
             <p style="font-size:small;"> Publicado por: ' . $user . ' el ' . $date . ' </p>
-            
+            <div allign="left">
+            <button class="btn btn--radius-2" style="background-color:#CED4DA;" type="submit"> <a href = "'.$contactLink.'"> Contactar </a>  </button>
             </div>
             </section>
             <section>                
