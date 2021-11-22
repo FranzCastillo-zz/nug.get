@@ -20,8 +20,6 @@
                 <p>'. $description .'</p>
 
             <p style="font-size:small;"> Publicado por: ' . $user . ' el ' . $date . ' </p>
-            <div class="contactButton" style="color: #003366; background-color: #99CCFF": flex; justify-content: flex-end; margin: 10px">
-            <a href = "'.$contactLink.'"> contactar </a></button>  
             
             </div>
             </section>
